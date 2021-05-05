@@ -13,23 +13,24 @@ export const AddCategory = ({ setCategory }) => {
 
         if (inputValue.trim().length > 0) {
             setCategory(inputValue);
-            setInputValue("");
+            setInputValue('');
         }
     }
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={inputValue}
-                onChange={handleInputChange}
-                placeholder="Busca algo..."
-            />
-            &nbsp;
-            <button type="submit" class="btn btn-success btn-search" title="Buscar..." onSubmit={handleSubmit}>Buscar</button>            
-        </form>
-        <br/>
+            <form onSubmit={handleSubmit}>
+                <p> {inputValue} </p>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    placeholder="Busca algo..."
+                />
+                &nbsp;
+                <button type="submit" class="btn btn-success btn-search" title="Buscar..." onSubmit={handleSubmit}>Buscar</button>            
+            </form>
+            <br/>
         </>
     );
 }

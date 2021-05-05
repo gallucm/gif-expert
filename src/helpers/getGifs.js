@@ -9,3 +9,5 @@ export const getGifs = async (category) => {
 
     return gifs
 }
+
+// TODO agregar cantidad de elementos a buscar en el metodo
