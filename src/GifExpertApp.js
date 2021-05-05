@@ -2,22 +2,28 @@ import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = ({defaultCategory = ''}) => {
+const GifExpertApp = ({ defaultCategory = '' }) => {
 
-    // const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState(defaultCategory);
 
     return (
         <>
-            <h2>Buscador de GIFS</h2>
+            <div>
+                {/* <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked"/>   
+                </div>   */}
+                <h2 className="the-title">Buscador de GIFS</h2>
+            </div>
+            
+
             <AddCategory setCategory={setCategory} />
             <hr />
 
             <ul>
                 {
-                    <GifGrid category={category}/>
+                    <GifGrid category={category} />
                 }
-            </ul>
+            </ul>     
         </>
     );
 }

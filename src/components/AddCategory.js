@@ -18,18 +18,18 @@ export const AddCategory = ({ setCategory }) => {
     }
 
     return (
-        <>
+        <>            
             <form onSubmit={handleSubmit}>
-                <p> {inputValue} </p>
                 <input
-                    type="text"
+                    type="text"                    
+                    className="form-control w-25 m-auto mb-3 mt-3 mw-200 input-value"
                     value={inputValue}
                     onChange={handleInputChange}
                     placeholder="Busca algo..."
                 />
-                &nbsp;
-                <button type="submit" class="btn btn-success btn-search" title="Buscar..." onSubmit={handleSubmit}>Buscar</button>            
+                <button type="submit" disabled={inputValue === ''} className="btn btn-success btn-search" title="Buscar..." onSubmit={handleSubmit}>Buscar</button>                                           
             </form>
+          
             <br/>
         </>
     );
