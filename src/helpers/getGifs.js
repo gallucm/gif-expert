@@ -10,4 +10,21 @@ export const getGifs = async (category, limit=10) => {
     return gifs
 }
 
-// TODO agregar cantidad de elementos a buscar en el metodo
+export const downloadGif = async (url, title) => {
+    const image = await fetch(url);
+    const imageB = await image.blob();
+    const imageURL = URL.createObjectURL(imageB); 
+    const link = document.createElement('a');
+
+    link.href = imageURL;
+    link.download = splitTitle(title);
+    document.body.appendChild(link);
+    
+    link.click();
+    document.body.removeChild(link);
+}
+
+const splitTitle = (title) => {
+    const fullTitle = title.split(' ');    
+    return fullTitle[0];
+};

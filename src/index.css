@@ -29,7 +29,7 @@ input {
     margin-right: 50px;
     overflow: hidden;
     width: 290px;
-    border: 2px solid #ccc;
+    border: transparent;
 }
 
 .card p{
@@ -65,4 +65,20 @@ input {
 .the-title{
     font-family: 'Brush Script MT', cursive;
     font-weight: 600;
+}
+
+#img-gif{
+    border-radius: 5px;
+}
+
+.btn-download{
+    font-size: 40px;
+    color:gray;
+    transition: all 200ms;
+}
+
+.btn-download:hover{
+    font-size: 70px;
+    color: #198754;
+    transition: all 200ms;
 }

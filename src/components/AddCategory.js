@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
 export const AddCategory = ({ setCategory, setLimit }) => {
+
+    const defaulLimitValue = 5;
+
     const [inputValue, setInputValue] = useState("");
-    const [inputLimit, setInputLimit] = useState(0);
+    const [inputLimit, setInputLimit] = useState(defaulLimitValue);
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
@@ -20,7 +23,7 @@ export const AddCategory = ({ setCategory, setLimit }) => {
             setCategory(inputValue);
             setLimit(inputLimit);
 
-            setInputLimit(0);
+            setInputLimit(defaulLimitValue);
             setInputValue('');
         }
     }
