@@ -57,6 +57,11 @@ input {
     min-width: 200px !important;
 }
 
+.limit-value{
+    width: 5% !important;
+    min-width: 80px !important;
+}
+
 .the-title{
     font-family: 'Brush Script MT', cursive;
     font-weight: 600;

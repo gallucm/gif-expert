@@ -3,9 +3,9 @@ import { useFetchGifs } from '../hooks/useFetchGifs'
 import { GifGridItem } from './GifGridItem'
 import PropTypes from 'prop-types';
 
-export const GifGrid = ({ category }) => {
+export const GifGrid = ({ category, limit }) => {
 
-    const {data:images} = useFetchGifs(category);
+    const {data:images} = useFetchGifs(category, limit);
 
     return (
         <>
@@ -27,5 +27,6 @@ export const GifGrid = ({ category }) => {
 }
 
 GifGrid.propTypes = {
-    category: PropTypes.string.isRequired
+    category: PropTypes.string.isRequired,
+    limit: PropTypes.number.isRequired
 }

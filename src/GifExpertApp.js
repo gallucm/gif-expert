@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = ({ defaultCategory = '' }) => {
+const GifExpertApp = ({ defaultCategory = '', defaultLimit = 5 }) => {
 
     const [category, setCategory] = useState(defaultCategory);
+    const [limit, setLimit] = useState(defaultLimit);
 
     return (
         <>
@@ -16,12 +17,12 @@ const GifExpertApp = ({ defaultCategory = '' }) => {
             </div>
             
 
-            <AddCategory setCategory={setCategory} />
+            <AddCategory setCategory={setCategory} setLimit={setLimit} />
             <hr />
 
             <ul>
                 {
-                    <GifGrid category={category} />
+                    <GifGrid category={category} limit={limit} />
                 }
             </ul>     
         </>
